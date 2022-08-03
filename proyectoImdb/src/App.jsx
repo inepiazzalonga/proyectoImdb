@@ -1,7 +1,8 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import { Home } from "./components/Home/Home";
-import { Movies } from "./components/Movies/Movies";
+import MovieCollectionContainer from "./pages/MovieCollectionContainer/MovieCollectionContainer";
+// import Movies from "./pages/Movies/Movies";
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
 
-          <Route path="/movies" element={<Movies />} />
+          <Route path="/movies" element={<MovieCollectionContainer />} />
         </Routes>
       </BrowserRouter>
     </div>

@@ -1,9 +1,9 @@
-import React from "react";
-
-export const Movies = () => {
+const Movies = () => {
   return (
     <div>
       <h1>Movies</h1>
     </div>
   );
 };
+
+export default Movies;
