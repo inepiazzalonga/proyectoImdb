@@ -1,0 +1,13 @@
+.movieCard{
+    width: 25em;
+    height: auto;
+}
+
+.movieCard img{
+    width: 80%;
+}
+
+.movieCard h3{
+    font-size: 20px;
+    text-align: center;
+}

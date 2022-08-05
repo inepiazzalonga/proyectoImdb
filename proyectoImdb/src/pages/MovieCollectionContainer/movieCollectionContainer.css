@@ -1,0 +1,7 @@
+.movieContainer{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-around; */
+    column-gap: 2em;
+    flex-wrap: wrap;
+}

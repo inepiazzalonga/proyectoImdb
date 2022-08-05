@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 // import MovieCollection from "../../components/Collection/MovieCollection";
 import Movie from "../../components/Movie/Movie";
+import "./movieCollectionContainer.css";
 
 const MovieCollectionContainer = () => {
   const [movies, setMovies] = useState([]);
@@ -20,7 +21,7 @@ const MovieCollectionContainer = () => {
   }, []);
 
   return (
-    <div>
+    <div className="movieContainer">
       {/* <MovieCollection movies={movies} /> */}
       {/* //         <Movie key={movie.id} movie={movie} /> */}
       {movies.map((movie) => (
