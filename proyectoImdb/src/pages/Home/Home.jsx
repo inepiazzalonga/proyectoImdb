@@ -2,11 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { useRef } from "react";
 import { Link } from "react-router-dom";
-<<<<<<< HEAD:proyectoImdb/src/components/Home/Home.jsx
-import { Ingresar } from "../Ingresar/Ingresar";
-=======
-import MovieCollectionContainer from "../MovieCollectionContainer/MovieCollectionContainer";
->>>>>>> ed10e6d26489a041fc82be6938af38a6bedf0d80:proyectoImdb/src/pages/Home/Home.jsx
+import { Ingresar } from "../../components/Ingresar/Ingresar";
 import "./Home.css";
 
 export const Home = () => {
@@ -55,7 +51,6 @@ export const Home = () => {
         name="password"
         ref={password}
       />
-<<<<<<< HEAD:proyectoImdb/src/components/Home/Home.jsx
       {!user ? (
         <>
           <button>Registrarse</button>
@@ -70,9 +65,6 @@ export const Home = () => {
       )}
 
       {/* <input type="submit" value={"Ingresar"} onClick={logIn} /> */}
-=======
-      <input type="submit" value={"Ingresar"} onClick={logIn} />
->>>>>>> ed10e6d26489a041fc82be6938af38a6bedf0d80:proyectoImdb/src/pages/Home/Home.jsx
     </div>
   ) : (
     <Link to={"/movies"}>
