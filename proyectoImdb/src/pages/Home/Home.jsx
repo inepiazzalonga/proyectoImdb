@@ -2,8 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { useRef } from "react";
 import { Link } from "react-router-dom";
-import Movies from "../../pages/Movies/Movies";
-// import Movies from "../Movies/Movies";
+import MovieCollectionContainer from "../MovieCollectionContainer/MovieCollectionContainer";
 import "./Home.css";
 
 export const Home = () => {
@@ -56,7 +55,7 @@ export const Home = () => {
     </div>
   ) : (
     <Link to={"/movies"}>
-      <Movies />
+      <MovieCollectionContainer />
     </Link>
   );
 };
