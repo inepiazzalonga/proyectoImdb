@@ -4,7 +4,8 @@ import { Card } from "react-bootstrap";
 const Movie = ({ movie }) => {
   return (
     <div>
-      <img src={movie.poster_path} alt="" />
+      <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt="" />
+      <h1>{movie.title}</h1>
     </div>
     // <Card className="card" style={{ width: "16rem" }}>
     //   <Link>
