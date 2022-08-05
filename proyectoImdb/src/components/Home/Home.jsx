@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { useRef } from "react";
 import { Link } from "react-router-dom";
+import { Ingresar } from "../Ingresar/Ingresar";
 import "./Home.css";
 
 export const Home = () => {
@@ -44,12 +45,22 @@ export const Home = () => {
         name="password"
         ref={password}
       />
-      <input
-        type="submit"
-        value={"Ingresar"}
-        onClick={logIn}
-        {...(user && <Link to="/movies" />)}
-      />
+      {!user ? (
+        <>
+          <button>Registrarse</button>
+        </>
+      ) : (
+        <>
+          <Link to={"/movies"}>
+            <Ingresar onClick={logIn} />
+          </Link>
+          <button>Registrarse</button>
+        </>
+      )}
+
+      {/* <input type="submit" value={"Ingresar"} onClick={logIn} /> */}
     </div>
   );
 };
+
+// entro a la pagina, me quiero loguear --> pongo mi usuario y clave --> hago click en ingresar --> ingresar valida la clave --> si es correcta entro --> si es incorrecta nada, regustrar
