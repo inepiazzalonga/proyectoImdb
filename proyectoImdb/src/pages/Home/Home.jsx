@@ -2,7 +2,11 @@ import React from "react";
 import { useState } from "react";
 import { useRef } from "react";
 import { Link } from "react-router-dom";
+<<<<<<< HEAD:proyectoImdb/src/components/Home/Home.jsx
 import { Ingresar } from "../Ingresar/Ingresar";
+=======
+import MovieCollectionContainer from "../MovieCollectionContainer/MovieCollectionContainer";
+>>>>>>> ed10e6d26489a041fc82be6938af38a6bedf0d80:proyectoImdb/src/pages/Home/Home.jsx
 import "./Home.css";
 
 export const Home = () => {
@@ -26,16 +30,22 @@ export const Home = () => {
       (usuarioI) => usuarioI.nombre === usuario.current.value
     );
 
-    if (password.current.value === usuarioIngresado.password) {
-      alert("hola vieji");
-      setUser(true);
+    let registrado = usuarios.includes(usuarioIngresado);
+
+    if (registrado) {
+      if (password.current.value === usuarioIngresado.password) {
+        alert("hola vieji");
+        setUser(true);
+      } else if (password.current.value !== usuarioIngresado.password) {
+        alert("contraseña incorrecta gil");
+        console.log(usuarioIngresado);
+      }
     } else {
-      alert("contraseña incorrecta gil");
+      alert("registrate y paga raton");
     }
-    console.log(usuarioIngresado);
   }
 
-  return (
+  return !user ? (
     <div className="divHome">
       <h2>Inicie sesión</h2>
       <input type="text" placeholder="Usuario" name="usuario" ref={usuario} />
@@ -45,6 +55,7 @@ export const Home = () => {
         name="password"
         ref={password}
       />
+<<<<<<< HEAD:proyectoImdb/src/components/Home/Home.jsx
       {!user ? (
         <>
           <button>Registrarse</button>
@@ -59,7 +70,14 @@ export const Home = () => {
       )}
 
       {/* <input type="submit" value={"Ingresar"} onClick={logIn} /> */}
+=======
+      <input type="submit" value={"Ingresar"} onClick={logIn} />
+>>>>>>> ed10e6d26489a041fc82be6938af38a6bedf0d80:proyectoImdb/src/pages/Home/Home.jsx
     </div>
+  ) : (
+    <Link to={"/movies"}>
+      <MovieCollectionContainer />
+    </Link>
   );
 };
 
