@@ -68,7 +68,7 @@ export const Home = () => {
     </div>
   ) : (
     <Link to={"/movies"}>
-      <MovieCollectionContainer />
+      <Movie />
     </Link>
   );
 };

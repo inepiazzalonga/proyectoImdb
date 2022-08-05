@@ -1,8 +1,13 @@
 import Movie from "../Movie/Movie";
 
 const MovieCollection = ({ movies }) => {
-  return movies.map((movie) => {
-    <Movie key={movie.id} movie={movie} />;
-  });
+  console.log(movies);
+  return (
+    <div>
+      {/* {movies.map((movie) => (
+        <Movie key={movie.id} movie={movie} /> */}
+      ))}
+    </div>
+  );
 };
 export default MovieCollection;
