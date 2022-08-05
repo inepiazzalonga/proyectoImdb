@@ -10,9 +10,7 @@ const MovieCollectionContainer = () => {
 
   useEffect(() => {
     const getMovie = async () => {
-      const response = await fetch(
-        "https://api.themoviedb.org/3/tv/1?api_key=281ba2168b1ae32fe373f4735451daa8&language=en-US"
-      );
+      const response = await fetch(api);
       const data = await response.json();
 
       console.log(data.results);
